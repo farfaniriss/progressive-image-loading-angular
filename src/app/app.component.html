@@ -1,6 +1,6 @@
 <div [ngClass]="'progressive-loading'">
   <div [ngClass]="'progressive-loading-wrapper'">
   <img *ngIf="ready"  [ngClass]="'original'" src="{{coverImageTest}}">
-  <img *ngIf="!ready" [ngClass]="'thumb'" src="{{thumbTest}}" />
+  <img [ngClass]="{'thumb':true, 'hide':ready}" src="{{thumbTest}}" />
   </div>
 </div>
